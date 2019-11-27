@@ -17,7 +17,7 @@ Kodun doğru çalışabilmesi için görüntüler alınırken hareket etmemeye �
 Bu aşamada sadece **trainer.py** adlı dosyayı çalıştırmanız yeterli olacaktır.
 
 ### 3) ID - İsim Eşleştirmesi
-Eğitim aşamasını geçtikten sonra **faceDetector.py** adlı dosyadaki labels adlı sözlükte aşağıdaki şekilde bir değişiklik yapılmalıdır. 
+Eğitim aşamasını geçtikten sonra **faceDetector.py** adlı dosyadaki labels adlı sözlüğe aşağıdaki şekilde bir ekleme yapılmalıdır. 
 ```python
 labels = {1:"<isim1>", 2: "<isim2>"}
 ```
