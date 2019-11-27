@@ -10,7 +10,7 @@
 *: Zorunlu
 ### 1) Dataset Oluşturma 
 **dataSetCreator.py** adlı dosyayı çalıştırdığınızda kullanıcıya vermek istediğiniz ID sorulacaktır. 
-ID'yi yazdıktan sonra varsayılan kameranız tarafından 21 adet görüntü alınacaktır.
+ID'yi yazdıktan sonra varsayılan kameranız aracılığıyla 21 adet görüntü alınacaktır.
 Kodun doğru çalışabilmesi için görüntüler alınırken hareket etmemeye özen göstermelisiniz.
 
 ### 2) Eğitim
