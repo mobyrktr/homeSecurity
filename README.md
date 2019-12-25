@@ -1,6 +1,7 @@
 # Yeni Kullanıcı Ekleme
 
 **_Daha sonra, bu aşamaların hiçbirine gerek kalmadan bir fonksiyon aracığıyla kullanıcı kaydı yapılacaktır._**
+**_Fonksiyon Eklendi._**
 
 * Dataset Oluşturma*
 * Eğitim*
