@@ -6,8 +6,9 @@ from PIL import Image
 
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 path = "dataSet"
-imagePaths = list()
+
 def getImagesWithID(path):
+    imagePaths = list()
     for f in os.listdir(path): # klasör altındaki bütün dosyaları içeren liste --> User.2.1.jpg
         imagePaths.append(os.path.join(path, f)) # dosya yolu ile dosya adını birleştirdik --> dataSet\\User.2.1.jpg
     faces = list()
@@ -22,9 +23,10 @@ def getImagesWithID(path):
         cv2.waitKey(10)
     return np.array(IDs), faces
 
-IDs, faces = getImagesWithID(path)
-recognizer.train(faces, IDs)
-recognizer.save("recognizer/trainingData.yml")
-cv2.destroyAllWindows()
+def train():
+    IDs, faces = getImagesWithID(path)
+    recognizer.train(faces, IDs)
+    recognizer.save("recognizer/trainingData.yml")
+    cv2.destroyAllWindows()
 
 

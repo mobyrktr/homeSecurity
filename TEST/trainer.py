@@ -21,10 +21,9 @@ def getImagesWithID(path):
         cv2.waitKey(10)
     return np.array(IDs), faces
 
-IDs, faces = getImagesWithID(path)
-recognizer.train(faces, IDs)
-recognizer.save("recognizer/trainingData.yml")
-
-cv2.destroyAllWindows()
-
-
+def train():
+    IDs, faces = getImagesWithID(path)
+    recognizer.train(faces, IDs)
+    recognizer.save("recognizer/trainingData.yml")
+    
+    cv2.destroyAllWindows()

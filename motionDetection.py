@@ -2,11 +2,7 @@
 import cv2
 import imutils
 
-video_capture = cv2.VideoCapture(0)
-frame = video_capture.read()[1]
-
 def motion_detection():
-    print("Başladım")
     video_capture = cv2.VideoCapture(0)
     first_frame = None
     
@@ -20,10 +16,9 @@ def motion_detection():
         greyscale_image = blur_frame
         if first_frame is None:
             first_frame = greyscale_image
-        else:
-            pass
         
         frame = imutils.resize(frame, width = 500)
+
         frame_delta = cv2.absdiff(first_frame, greyscale_image) # Hareketi gözlemlemek için iki kare arasındaki piksel farklarını bulur.
         
         thresh = cv2.threshold(frame_delta, 125, 255, cv2.THRESH_BINARY)[1] # 125 değerinin üzerindeki her pikseli beyaza dönüştür.
@@ -35,9 +30,7 @@ def motion_detection():
         for c in cnt:
             if cv2.contourArea(c) > 700: # beyazlı bölgenin alanı 700'den büyükse... (Ortam parlaklığına göre değiştirilmelidir.)
                 cv2.destroyAllWindows()
-                return "motion"
+                return True
                 break
-            else:
-                pass
         
 

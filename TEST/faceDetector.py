@@ -8,7 +8,7 @@ recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read("recognizer/trainingData.yml")
 id_ = 0
 font = cv2.FONT_HERSHEY_SIMPLEX
-labels = {1:"<>", 2: "<>", 3: "<>", -1: "Bilinmeyen"}
+labels = {1:"Onur", 2: "<>", 3: "<>", -1: "Bilinmeyen"}
 while True:
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -16,7 +16,7 @@ while True:
     for(x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
         id_, conf = recognizer.predict(gray[y: y + h, x: x + w])
-        if(conf < 80):
+        if(conf < 40):
             print(id_, conf)
         else:
             id_ = -1
