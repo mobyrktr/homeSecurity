@@ -50,7 +50,7 @@ class EmailConnection(object):
         self.connection.ehlo()
         self.connection.starttls()
         self.connection.ehlo()
-        self.connection.login('mobyrktr@gmail.com','eqhqdhzugbqrhlzn')
+        self.connection.login('sender@gmail.com','*********')
 
     def send(self, message, from_=None, to=None):
         if type(message) == str:
@@ -111,5 +111,3 @@ def sendMails(admins):
         server.close()
             
         print('Gönderildi!')
-
-#sendMails("mobyrktr4@gmail.com", "Deneme")
