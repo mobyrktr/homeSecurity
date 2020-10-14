@@ -7,6 +7,7 @@ import TTS as tts
 import time
 import serial
 
+#add user
 def kullaniciEkle(ad, soyad, kart_uid, adminMi, username = None, password = None, e_mail = None):
     connection = sqlite3.connect("/home/mobyrktr/Python/users_test.db")
     connection.execute("insert into users (f_name, l_name, card_uid, isAdmin, username, password, e_mail) values(?, ?, ?, ?, ?, ?, ?)", (ad, soyad, kart_uid, adminMi, username, password, e_mail))
@@ -17,7 +18,7 @@ def kullaniciEkle(ad, soyad, kart_uid, adminMi, username = None, password = None
     dsc.createDataSet(id_)
     tr.train()
     tts.girisKayit(ad)
-
+#del user
 def kullaniciSil(id_):
     isAdmin = getUserType(id_)
 
