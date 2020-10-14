@@ -139,7 +139,9 @@ def login_screen():
                 users.append([row[0], row[1], row[2]])
 
             connection.close()
-            #empty print ??
+            
+
+        
             print()
             username = input("Kullanıcı Adı: ")
             password = input("Şifre: ")
