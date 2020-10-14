@@ -9,7 +9,7 @@ import cv2
 #arduino = serial.Serial("COM8", 115200, timeout = 1) arduino haberleşmesini başlatmak için
 alarmCal = False
 tara = m.motion_detection()
-print(tara)
+print("motion detection: ", tara)
 if tara == "motion": # hareket algılanırsa...
     while True:
         cap = cv2.VideoCapture()
