@@ -77,7 +77,7 @@ def sendMails(admins):
         to_email = admin[0]
         to_name = admin[1]
 
-        print("sending mail to: ", to_email)
+        print(to_email)
         name = "MONUR Home Security Solutions®"
         from_email = "###"
         password = "###"
