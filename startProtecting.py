@@ -54,8 +54,8 @@ def protect(confidence):
         decision_time = 10
         card_reading_time = 10
         face_recognition_time = 10
-        hak = 5
-
+        hak = 3
+        # 5 hak fazla 3 yeterli
         print("Hareket algılandı.")
         tts.hosgeldin("girisYontemi")
         print(f"Bir giriş yöntemi seçmek için {decision_time} saniyeniz var.")
